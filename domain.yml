@@ -1,0 +1,34 @@
+intents:
+  - greet
+  - goodbye
+  - tdk_sorular
+  
+
+entities:
+  - kelime
+  
+
+slots:
+  kelime:
+    type: text
+
+actions:
+  - action_kelime
+
+
+responses:
+  utter_greet:
+  - text: "Selam, ne öğrenmek istiyorsunuz?"
+
+  utter_show_kelime:
+  - text: "Arancak kelime {kelime}"
+
+  utter_goodbye:
+  - text: "Hoşçakalın"
+  
+
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
